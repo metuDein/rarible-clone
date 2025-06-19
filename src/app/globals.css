@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 6% 14.5%; /* #262437 - Rarible's dark background */
+    --foreground: 0 0% 98%;
+    --card: 240 6% 16%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 6% 14.5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 347 85% 74%; /* #db5e7f - Rarible's accent pink */
+    --primary-foreground: 240 6% 14.5%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 38 30% 54%; /* #b79161 - Rarible's accent brown */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 20%;
+    --input: 240 3.7% 18%;
+    --ring: 347 85% 74%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 6% 14.5%;
+    --foreground: 0 0% 98%;
+    --card: 240 6% 16%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 6% 14.5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 347 85% 74%;
+    --primary-foreground: 240 6% 14.5%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 38 30% 54%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 20%;
+    --input: 240 3.7% 18%;
+    --ring: 347 85% 74%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+}
+
+@layer components {
+  .nft-card {
+    @apply bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all duration-200;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+}
